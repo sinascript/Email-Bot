@@ -2,13 +2,13 @@ import telebot
 import redis
 r = redis.Redis('localhost')
 from tempmail import TempMail
-token = 'TOKEN'
+token = '232204590:AAHnmzmxw51R_Rz6uSA2EbXHr2rsqjzo2wY'
 bot = telebot.TeleBot(token)
 user = bot.get_me().username
 @bot.message_handler(commands=['start'])
 def start(m):
   # start text
-  text = 'Hi.\nWelcome to {}.\nCommands: \n/newmail: For making a new Email.\n/mails: For reading new emails.'.format(user)
+  text = 'Hi.\nWelcome to {}.\nCommands: \n/newmail: For making a new Email.\n/mails: For reading new emails.creator:@sina08753'.format(user)
   bot.send_message(m.chat.id, text)
 @bot.message_handler(commands=['newmail'])
 def newmail(m):
